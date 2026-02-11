@@ -2,11 +2,10 @@ name = "daniel-award"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-# ── Custom Domain (optional) ──
-# Uncomment and set your domain after adding it in Cloudflare Dashboard:
-# routes = [
-#   { pattern = "daniel-award.arizonachristian.edu", custom_domain = true }
-# ]
+# ── Custom Domain ──
+routes = [
+  { pattern = "daniel-award.arizonachristian.edu/*", zone_name = "arizonachristian.edu" }
+]
 
 # ── Environment Variables ──
 # Secrets are set via: npx wrangler secret put STRIPE_SECRET_KEY
