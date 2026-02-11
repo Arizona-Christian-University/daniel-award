@@ -1,0 +1,23 @@
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+worker/
+dist/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+
+# System
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
