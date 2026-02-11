@@ -1,0 +1,10 @@
+{
+  "name": "daniel-award",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy",
+    "secrets": "echo 'Run each: npx wrangler secret put STRIPE_SECRET_KEY && npx wrangler secret put STRIPE_PUBLISHABLE_KEY && npx wrangler secret put STRIPE_WEBHOOK_SECRET'"
+  }
+}
