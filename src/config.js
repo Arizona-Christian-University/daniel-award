@@ -119,7 +119,7 @@ export const CONFIG = {
 
   // ── CTA Footer ──
   cta: {
-    title: 'Questions About the Daniel Award?',
+    title: 'Questions About the<br>Daniel Award?',
     text: 'Our advancement team is here to help with sponsorship details, seating arrangements, and event information.',
     email: 'advancement@arizonachristian.edu',
     phone: '1(602) 489-5300',

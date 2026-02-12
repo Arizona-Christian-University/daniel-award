@@ -469,7 +469,7 @@ ${awardHTML}
 <!-- ══════════ CTA FOOTER ══════════ -->
 <section class="da-cta">
   <div class="da-container-narrow">
-    <h2 class="da-anim">${esc(cta.title)}</h2>
+    <h2 class="da-anim">${cta.title}</h2>
     ${cta.text ? `<p class="da-anim da-d2">${esc(cta.text)}</p>` : ''}
     <div class="da-cta-contact da-anim da-d3">
       <a href="mailto:${esc(cta.email)}"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>${esc(cta.email)}</a>
