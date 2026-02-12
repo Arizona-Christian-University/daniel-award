@@ -267,7 +267,7 @@ function servePage(env) {
             <div class="da-about-photo-accent"></div>
           </div>
           <h2 class="da-anim da-d2">${esc(hon.firstName)} <span>${esc(hon.lastName)}</span></h2>
-          ${hon.role ? `<p class="da-about-role da-anim da-d3">${esc(hon.role)}</p>` : ''}
+          ${hon.role ? `<p class="da-about-role da-anim da-d3">${hon.role}</p>` : ''}
           ${hon.bio ? `<div class="da-about-bio da-anim da-d4">${hon.bio}</div>` : ''}
         </div>
       </section>`
