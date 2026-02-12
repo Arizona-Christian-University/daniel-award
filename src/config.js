@@ -14,7 +14,7 @@ export const CONFIG = {
     edition:       '6th',
     awardName:     'Daniel Award',
     subtitle:      'for Courageous Public Faith',
-    honoreeLine:   '', // e.g. "Honoring Governor Doug Ducey"
+    honoreeLine:   'Honoring George Barna',
     quote:         '', // optional hero quote
     eventDate:     '', // e.g. "Thursday, November 13, 2025"
     venueName:     '', // e.g. "Arizona Biltmore"
@@ -24,10 +24,20 @@ export const CONFIG = {
   // ── Honoree Section ──
   honoree: {
     photoUrl:  '', // URL to honoree photo
-    firstName: '', // e.g. "Doug"
-    lastName:  '', // e.g. "Ducey"
-    role:      '', // e.g. "48th Governor of Arizona"
-    bio:       '', // HTML allowed — use <p> tags
+    firstName: 'George',
+    lastName:  'Barna',
+    role:      'Director of Research, Cultural Research Center at Arizona Christian University',
+    bio:       `<p>Arizona Christian University warmly invites you to an unforgettable evening celebrating courage, conviction, and faithfulness to biblical truth as we honor legendary social scientist and bestselling author George Barna with our 6th Daniel Award for Courageous Public Faith.</p>
+
+    <p>For more than four decades, George Barna has stood at the forefront of understanding faith, culture, and the spiritual condition of America. An author, speaker, and pioneering public opinion researcher, Barna founded the Barna Research Group in 1984 and helped establish rigorous, data-driven research as a trusted tool for Christian ministries, churches, and leaders across the nation. His work has educated thousands of churches, major ministries, corporations, and government institutions, and has shaped countless conversations about worldview, discipleship, and cultural engagement.</p>
+
+    <p>Barna is also one of the most prolific and influential Christian authors of our time. He has written more than 60 books, including numerous national bestsellers, addressing topics such as biblical worldview, parenting, spiritual formation, leadership, evangelism, and cultural trends. Millions of readers around the world have been challenged and encouraged by works such as <em>Revolution</em>, <em>Think Like Jesus</em>, <em>Raising Spiritual Champions</em>, and <em>The Power of Vision</em>. His research and writing have earned him a reputation as "the gold standard in Christian research" and one of the most quoted voices in the Christian Church today.</p>
+
+    <p>Throughout his career, Barna has demonstrated uncommon courage by telling the truth about what is actually happening in the Church and in society—not to discourage believers, but to equip them. His life's mission has been to help Christians move beyond surface-level faith toward authentic discipleship rooted in Scripture, obedience, and transformation. Even when his findings have been misunderstood or resisted, he has remained steadfast, motivated by a deep love for Christ and for His Church.</p>
+
+    <p>Today, Barna serves as a professor and Director of Research at the Cultural Research Center at Arizona Christian University, where his research offers a hopeful contrast to many national trends. His measurements show that ACU students grow stronger each year in their faith, biblical worldview, and commitment to conservative Christian beliefs and practices. Graduates of ACU are more likely to be spiritually mature than most adult Christian leaders—powerful evidence that intentional, Christ-centered education can shape lives and culture.</p>
+
+    <p>Proceeds from this special evening will provide scholarships to help make an ACU education accessible and affordable for students called to transform culture with truth. We hope you will join us, invite others, and partner with us in honoring George Barna for his decades of committed leadership, while investing in the next generation of courageous Christian leaders!</p>`,
   },
 
   // ── About the Award ──
