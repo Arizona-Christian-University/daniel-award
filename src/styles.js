@@ -242,7 +242,7 @@ a{text-decoration:none;}
 
 .da-vip-counter { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem; padding: 0.65rem 1rem; background: rgba(212,168,67,0.07); border-radius: 10px; border: 1px solid rgba(212,168,67,0.15); }
 .da-vip-counter svg { width: 16px; height: 16px; fill: var(--acu-gold); flex-shrink: 0; }
-.da-vip-counter p { font-size: 0.9rem; color: var(--acu-charcoal); line-height: 1.4; margin: 0; }
+.da-vip-counter p { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.4; margin: 0; }
 .da-vip-counter strong { color: var(--acu-gold); font-weight: 800; }
 .da-vip-counter .da-vip-count-num { font-weight: 800; color: var(--acu-gold); }
 
