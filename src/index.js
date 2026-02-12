@@ -566,7 +566,7 @@ function toggleGuestNames(){
   var container=document.getElementById('guestTablesContainer');
   var toggle=document.getElementById('guestToggleBtn');
   var toggleSection=document.querySelector('.da-guest-toggle');
-  if(container.style.display==='none'){
+  if(container.style.display==='none'||container.style.display===''){
     buildGuestFields();
     container.style.display='block';
     toggleSection.style.display='none';
