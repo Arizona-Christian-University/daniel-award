@@ -14,7 +14,7 @@ export const CONFIG = {
     edition:       '6th',
     awardName:     'Daniel Award',
     subtitle:      'for Courageous Public Faith',
-    honoreeLine:   'Honoring George Barna',
+    honoreeLine:   'Honoring Dr. George Barna',
     quote:         '', // optional hero quote
     eventDate:     '', // e.g. "Thursday, November 13, 2025"
     venueName:     '', // e.g. "Arizona Biltmore"
