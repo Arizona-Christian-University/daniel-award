@@ -401,9 +401,18 @@ ${awardHTML}
           <!-- STEP 2: GUEST NAMES -->
           <div class="da-step-panel" id="panel2">
             <div class="da-guests-section">
-              <h3 class="da-guests-title">Guest Names</h3>
-              <p class="da-guests-subtitle" id="guestsSubtitle">Enter the names for each seat at your table(s). You can update these later if needed.</p>
-              <div id="guestTablesContainer"></div>
+              <h3 class="da-guests-title">Guest Names (Optional)</h3>
+              <p class="da-guests-subtitle" id="guestsSubtitle">You can provide guest names now or submit them later.</p>
+
+              <div class="da-guest-toggle">
+                <button type="button" class="da-guest-toggle-btn" onclick="toggleGuestNames()" id="guestToggleBtn">
+                  <svg viewBox="0 0 24 24" class="da-toggle-icon"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                  <span>Add Guest Names Now</span>
+                </button>
+                <p class="da-guest-toggle-note">You can skip this step and provide names to our advancement team later.</p>
+              </div>
+
+              <div id="guestTablesContainer" style="display:none;"></div>
             </div>
             <div class="da-form-nav">
               <button class="da-btn da-btn-secondary" onclick="goToStep(1)"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg> Back</button>
@@ -547,12 +556,26 @@ function goToStep(n){
     if(p)p.classList.toggle('da-active',s===n);
     if(ind)ind.className='da-step'+(s===n?' da-step-active':s<n?' da-step-done':'');
   });
-  if(n===2)buildGuestFields();
   if(n===3)buildReview();
   if(n===4)initPaymentStep();
   document.getElementById('register').scrollIntoView({behavior:'smooth',block:'start'});
 }
 window.goToStep=goToStep;
+
+function toggleGuestNames(){
+  var container=document.getElementById('guestTablesContainer');
+  var toggle=document.getElementById('guestToggleBtn');
+  var toggleSection=document.querySelector('.da-guest-toggle');
+  if(container.style.display==='none'){
+    buildGuestFields();
+    container.style.display='block';
+    toggleSection.style.display='none';
+  }else{
+    container.style.display='none';
+    toggleSection.style.display='block';
+  }
+}
+window.toggleGuestNames=toggleGuestNames;
 
 function buildGuestFields(){
   var c=document.getElementById('guestTablesContainer');c.innerHTML='';
@@ -633,6 +656,7 @@ function buildReview(){
   rv+='<div class="da-review-row da-review-total"><span class="da-review-label">Total</span><span class="da-review-value">$'+state.price.toLocaleString()+'</span></div></div>';
   if(hg.length)rv+='<div class="da-review-block"><h4>Host Table Guests</h4><div class="da-review-guests">'+hg.map(function(g){return '<div class="da-review-guest"><span>Seat '+g.seat+':</span> '+g.first+' '+g.last+' <span style="color:var(--acu-gold);font-size:0.8rem;font-weight:700;">★ VIP</span></div>'}).join('')+'</div></div>';
   if(tg.length)rv+='<div class="da-review-block"><h4>Table Guest List ('+tg.length+' entered)</h4><div class="da-review-guests">'+tg.map(function(g){return '<div class="da-review-guest"><span>'+(state.tables>1?'T'+(parseInt(g.table)+1)+' ':'')+'Seat '+g.seat+':</span> '+g.first+' '+g.last+(g.vip?' <span style="color:var(--acu-gold);font-size:0.8rem;font-weight:700;">★ VIP</span>':'')+'</div>'}).join('')+'</div></div>';
+  if(!hg.length&&!tg.length)rv+='<div class="da-review-block"><h4>Guest Names</h4><p style="color:rgba(255,255,255,0.5);font-style:italic;">Guest names will be provided later to the advancement team.</p></div>';
   el.innerHTML=rv;
 }
 

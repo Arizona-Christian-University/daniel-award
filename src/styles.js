@@ -219,6 +219,14 @@ a{text-decoration:none;}
 .da-guests-section { margin-bottom: 1rem; }
 .da-guests-title { font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 0.25rem; }
 .da-guests-subtitle { font-size: 0.95rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+
+.da-guest-toggle { margin: 2rem 0; }
+.da-guest-toggle-btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(212,168,67,0.1); border: 2px solid var(--acu-gold); color: var(--acu-gold); font-family: inherit; font-size: 1rem; font-weight: 700; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; }
+.da-guest-toggle-btn:hover { background: rgba(212,168,67,0.2); transform: translateY(-2px); }
+.da-guest-toggle-btn svg { width: 20px; height: 20px; fill: var(--acu-gold); transition: transform 0.3s ease; }
+.da-guest-toggle-btn:hover svg { transform: translateX(4px); }
+.da-guest-toggle-note { margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.4); font-style: italic; }
+
 .da-table-group { margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 14px; border: 1px solid rgba(255,255,255,0.06); }
 .da-table-group-title { display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .da-table-group-title svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.4); }
