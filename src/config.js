@@ -26,7 +26,7 @@ export const CONFIG = {
     photoUrl:  'https://storage.googleapis.com/web.arizonachristian.edu/Photos/Geroge-Barna.png',
     firstName: 'Dr. George',
     lastName:  'Barna',
-    role:      'Director of Research, Cultural Research Center at Arizona Christian University',
+    role:      'Director of Research,<br>Cultural Research Center at Arizona Christian University',
     bio:       `<p>Arizona Christian University warmly invites you to an unforgettable evening celebrating courage, conviction, and faithfulness to biblical truth as we honor legendary social scientist and bestselling author George Barna with our 6th Daniel Award for Courageous Public Faith.</p>
 
     <p>For more than four decades, George Barna has stood at the forefront of understanding faith, culture, and the spiritual condition of America. An author, speaker, and pioneering public opinion researcher, Barna founded the Barna Research Group in 1984 and helped establish rigorous, data-driven research as a trusted tool for Christian ministries, churches, and leaders across the nation. His work has educated thousands of churches, major ministries, corporations, and government institutions, and has shaped countless conversations about worldview, discipleship, and cultural engagement.</p>
