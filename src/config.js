@@ -24,7 +24,7 @@ export const CONFIG = {
   // ── Honoree Section ──
   honoree: {
     photoUrl:  'https://storage.googleapis.com/web.arizonachristian.edu/Photos/Geroge-Barna.png',
-    firstName: 'George',
+    firstName: 'Dr. George',
     lastName:  'Barna',
     role:      'Director of Research, Cultural Research Center at Arizona Christian University',
     bio:       `<p>Arizona Christian University warmly invites you to an unforgettable evening celebrating courage, conviction, and faithfulness to biblical truth as we honor legendary social scientist and bestselling author George Barna with our 6th Daniel Award for Courageous Public Faith.</p>
