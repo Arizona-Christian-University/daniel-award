@@ -66,14 +66,15 @@ a{text-decoration:none;}
    ABOUT / HONOREE
    ═══════════════════════════════════════════ */
 .da-about { padding: 6rem 2rem; background: #fff; }
-.da-about-grid { display: grid; grid-template-columns: 350px 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; align-items: start; }
-.da-about-photo-wrap { position: relative; }
+.da-about-container { max-width: 1100px; margin: 0 auto; }
+.da-about-photo-wrap { position: relative; float: left; width: 350px; margin: 0 3rem 2rem 0; }
 .da-about-photo { width: 100%; aspect-ratio: 4/5; border-radius: 16px; background-size: cover; background-position: center top; background-color: #ddd; }
 .da-about-photo-accent { position: absolute; bottom: -12px; right: -12px; width: 60%; height: 60%; border-radius: 16px; border: 4px solid var(--acu-gold); opacity: 0.3; z-index: -1; }
-.da-about-body h2 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 800; color: var(--acu-black); margin-bottom: 0.5rem; }
-.da-about-body h2 span { color: var(--acu-red); }
+.da-about-container h2 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 800; color: var(--acu-black); margin-bottom: 0.5rem; }
+.da-about-container h2 span { color: var(--acu-red); }
 .da-about-role { font-size: 1.1rem; color: var(--acu-gray); font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--acu-light-gray); }
-.da-about-body p { font-size: 1.05rem; color: var(--acu-charcoal); margin-bottom: 1rem; line-height: 1.8; }
+.da-about-bio p { font-size: 1.05rem; color: var(--acu-charcoal); margin-bottom: 1rem; line-height: 1.8; }
+.da-about-container::after { content: ""; display: table; clear: both; }
 
 /* ═══════════════════════════════════════════
    ABOUT THE AWARD
@@ -342,7 +343,7 @@ a{text-decoration:none;}
   .da-tier-featured { grid-column: 1 / -1; max-width: 100%; }
 }
 @media (max-width: 768px) {
-  .da-about-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .da-about-photo-wrap { float: none; width: 100%; max-width: 400px; margin: 0 auto 2rem; }
   .da-about-photo { aspect-ratio: 4/3; max-height: 350px; }
   .da-tiers-grid { grid-template-columns: 1fr; }
   .da-individual-row { flex-direction: column; text-align: center; }
