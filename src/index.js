@@ -239,6 +239,7 @@ function servePage(env) {
     const highlight = t.highlight
       ? `<div class="da-tier-highlight"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>${esc(t.highlight)}</div>`
       : '';
+    const buttonText = `Select ${esc(t.name)}`.split(' ').join('<br>');
     return `
       <div class="da-tier-card ${extraClass} da-tier-${esc(t.style)} da-anim da-d${delay}"
            data-tier="${esc(t.name)}" data-price="${t.price}" data-tables="${t.tables}"
@@ -248,7 +249,7 @@ function servePage(env) {
         <div class="da-tier-divider"></div>
         ${highlight}
         <ul class="da-tier-features">${featuresList}</ul>
-        <button class="da-tier-select-btn" onclick="selectTier(this)">Select ${esc(t.name)}</button>
+        <button class="da-tier-select-btn" onclick="selectTier(this)">${buttonText}</button>
       </div>`;
   }
 
@@ -344,7 +345,7 @@ ${awardHTML}
         <button class="da-qty-btn" onclick="changeQty(-1)">−</button>
         <span class="da-qty-display" id="seatQty">1</span>
         <button class="da-qty-btn" onclick="changeQty(1)">+</button>
-        <button class="da-individual-select-btn" id="indivBtn" onclick="selectIndividual()">Select Seats</button>
+        <button class="da-individual-select-btn" id="indivBtn" onclick="selectIndividual()">Select<br>Seats</button>
       </div>
     </div>
   </div>
