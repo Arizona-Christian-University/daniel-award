@@ -72,7 +72,7 @@ a{text-decoration:none;}
 .da-about-photo-accent { position: absolute; bottom: -12px; right: -12px; width: 60%; height: 60%; border-radius: 16px; border: 4px solid var(--acu-gold); opacity: 0.3; z-index: -1; }
 .da-about-container h2 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 800; color: var(--acu-black); margin-bottom: 0.5rem; }
 .da-about-container h2 span { color: var(--acu-red); }
-.da-about-role { font-size: 1.1rem; color: var(--acu-gray); font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--acu-light-gray); }
+.da-about-role { font-size: 1.1rem; color: var(--acu-gray); font-weight: 600; margin-bottom: 1.5rem; }
 .da-about-bio p { font-size: 1.05rem; color: var(--acu-charcoal); margin-bottom: 1rem; line-height: 1.8; }
 .da-about-container::after { content: ""; display: table; clear: both; }
 
