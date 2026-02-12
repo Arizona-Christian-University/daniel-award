@@ -23,7 +23,7 @@ export const CONFIG = {
 
   // ── Honoree Section ──
   honoree: {
-    photoUrl:  '', // URL to honoree photo
+    photoUrl:  'https://storage.googleapis.com/web.arizonachristian.edu/Photos/Geroge-Barna.png',
     firstName: 'George',
     lastName:  'Barna',
     role:      'Director of Research, Cultural Research Center at Arizona Christian University',
