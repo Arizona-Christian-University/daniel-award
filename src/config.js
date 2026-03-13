@@ -19,6 +19,8 @@ export const CONFIG = {
     eventDate:     'Thursday, April 9, 2026', // e.g. "Thursday, November 13, 2025"
     venueName:     'Arizona Biltmore', // e.g. "Arizona Biltmore"
     venueLocation: '2400 E Missouri Ave, Phoenix, AZ 85016', // e.g. "Phoenix, Arizona"
+    eventTime:     'Check-In starts at 6:00 PM. Dinner and Program Start at 7:00 PM',
+    dressCode:     'Business Attire',
   },
 
   // ── Honoree Section ──
@@ -180,6 +182,8 @@ export const CONFIG = {
       photoUrl: 'https://storage.googleapis.com/web.arizonachristian.edu/Photos/George-Barna.png',
       eventDate: 'Thursday, April 9, 2026', // e.g. "Thursday, November 13, 2025"
       eventLocation: 'Arizona Biltmore, 2400 E Missouri Ave, Phoenix, AZ 85016', // e.g. "Arizona Biltmore, Phoenix, Arizona"
+      eventTime: 'Check-In starts at 6:00 PM. Dinner and Program Start at 7:00 PM',
+      dressCode: 'Business Attire',
       ctaLabel: 'Register Now',
       ctaUrl: '/register',
     },
