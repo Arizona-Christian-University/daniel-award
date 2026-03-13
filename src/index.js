@@ -847,6 +847,8 @@ function serveLandingPage(env) {
           ${L.featured.eventDate ? `<div class="da-featured-meta-item"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg><span>${esc(L.featured.eventDate)}</span></div>` : ''}
           ${L.featured.eventLocation ? `<div class="da-featured-meta-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>${esc(L.featured.eventLocation)}</span></div>` : ''}
         </div>` : ''}
+        ${L.featured.eventTime ? `<p class="da-featured-info da-anim da-d5" style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--acu-gray);">${esc(L.featured.eventTime)}</p>` : ''}
+        ${L.featured.dressCode ? `<p class="da-featured-info da-anim da-d5" style="margin-top: 0.5rem; font-size: 1.05rem; color: var(--acu-gray); font-weight: 600;">${esc(L.featured.dressCode)}</p>` : ''}
         ${L.featured.ctaUrl ? `<a href="${esc(L.featured.ctaUrl)}" class="da-featured-cta da-anim da-d5">${esc(L.featured.ctaLabel)}<svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : ''}
       </div>
     </div>
@@ -1119,6 +1121,8 @@ ${awardHTML}
       <div class="da-form-header" id="formHeader">
         <h2>Complete Your Registration</h2>
         <p>${esc(h.eventDate)}${(h.eventDate && h.venueName) ? ' &nbsp;·&nbsp; ' : ''}${esc(h.venueName)}${h.venueLocation ? ', ' + esc(h.venueLocation) : ''}</p>
+        ${h.eventTime ? `<p style="font-size: 0.95rem; margin-top: 0.5rem;">${esc(h.eventTime)}</p>` : ''}
+        ${h.dressCode ? `<p style="font-size: 0.95rem; margin-top: 0.25rem;">${esc(h.dressCode)}</p>` : ''}
         <div class="da-form-summary" id="formSummary" style="display:none;">
           <span class="da-form-summary-tier" id="summaryTier"></span>
           <span style="color:rgba(255,255,255,0.3);">·</span>
