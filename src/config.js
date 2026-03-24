@@ -162,7 +162,7 @@ export const CONFIG = {
     },
 
     // ── Intro Text ──
-    intro: 'Arizona Christian University warmly invites you to an unforgettable evening celebrating courage, conviction, and faithfulness to biblical truth, as we honor legendary social scientist and bestselling author George Barna with our 6th Daniel Award for Courageous Public Faith!',
+    intro: 'Arizona Christian University warmly invites you to an unforgettable evening celebrating courage, conviction, and faithfulness to biblical truth, as we honor legendary social scientist and bestselling author George Barna with our 6th Daniel Award for Courageous Public Faith! Barna will speak and answer questions about the latest research on worldview, faith and culture in America!',
 
     // ── About the Award ──
     about: {
