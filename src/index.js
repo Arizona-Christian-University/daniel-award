@@ -815,10 +815,12 @@ function serveLandingPage(env) {
     <span class="da-hero-badge da-anim da-d2">Arizona Christian University</span>
     <h1 class="da-anim da-d3">${esc(L.hero.title)}</h1>
     <p class="da-hero-sub da-anim da-d4">${esc(L.hero.subtitle)}</p>
-    <a href="/register" class="da-hero-cta da-anim da-d5">
-      Register Now
+    ${L.featured.ctaUrl ? `<a href="${esc(L.featured.ctaUrl)}" class="da-hero-cta da-anim da-d5">
+      ${esc(L.featured.ctaLabel)}
       <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-    </a>
+    </a>` : `<span class="da-hero-cta da-hero-cta-disabled da-anim da-d5">
+      ${esc(L.featured.ctaLabel)}
+    </span>`}
   </div>
 </section>`;
 
@@ -849,7 +851,7 @@ function serveLandingPage(env) {
         </div>` : ''}
         ${L.featured.eventTime ? `<p class="da-featured-info da-anim da-d5" style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--acu-gray);">${esc(L.featured.eventTime)}</p>` : ''}
         ${L.featured.dressCode ? `<p class="da-featured-info da-anim da-d5" style="margin-top: 0.5rem; font-size: 1.05rem; color: var(--acu-gray); font-weight: 600;">${esc(L.featured.dressCode)}</p>` : ''}
-        ${L.featured.ctaUrl ? `<a href="${esc(L.featured.ctaUrl)}" class="da-featured-cta da-anim da-d5">${esc(L.featured.ctaLabel)}<svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : ''}
+        ${L.featured.ctaUrl ? `<a href="${esc(L.featured.ctaUrl)}" class="da-featured-cta da-anim da-d5">${esc(L.featured.ctaLabel)}<svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : (L.featured.ctaLabel ? `<span class="da-featured-cta da-featured-cta-disabled da-anim da-d5">${esc(L.featured.ctaLabel)}</span>` : '')}
       </div>
     </div>
   </div>
@@ -899,7 +901,7 @@ function serveLandingPage(env) {
         ${L.about.text ? `<p class="da-cta-text da-anim da-d3" style="text-align:left;">${esc(L.about.text)}</p>` : ''}
         ${L.ctaSection.buttons && L.ctaSection.buttons.length > 0 ? `
         <div class="da-cta-btns da-anim da-d4" style="justify-content:flex-start;">
-          ${L.ctaSection.buttons.map((btn, i) => `<a href="${esc(btn.url)}" class="da-cta-btn ${btn.primary ? 'da-cta-btn-primary' : 'da-cta-btn-outline'}">${esc(btn.label)}</a>`).join('')}
+          ${L.ctaSection.buttons.map((btn, i) => btn.disabled ? `<span class="da-cta-btn ${btn.primary ? 'da-cta-btn-primary' : 'da-cta-btn-outline'} da-cta-btn-disabled">${esc(btn.label)}</span>` : `<a href="${esc(btn.url)}" class="da-cta-btn ${btn.primary ? 'da-cta-btn-primary' : 'da-cta-btn-outline'}">${esc(btn.label)}</a>`).join('')}
         </div>` : ''}
       </div>
       ${(L.about.passage || L.about.scripture) ? `
@@ -956,11 +958,88 @@ ${ctaHTML}
 
 
 // ═══════════════════════════════════════════
+// SERVE REGISTRATION CLOSED PAGE
+// ═══════════════════════════════════════════
+
+function serveRegistrationClosedPage() {
+  const C = CONFIG;
+  const h = C.hero;
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Closed &mdash; ${esc(h.awardName)} | Arizona Christian University</title>
+  <meta name="description" content="Registration for the ${esc(h.edition)} ${esc(h.awardName)} is now closed.">
+  <link rel="icon" type="image/x-icon" href="https://azcu.edu/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>${CSS}</style>
+</head>
+<body>
+<div class="da-page">
+
+<!-- HERO -->
+<section class="da-hero" style="min-height: 70vh;">
+  <div class="da-hero-overlay"></div>
+  <div class="da-hero-content">
+    <img src="https://storage.googleapis.com/web.arizonachristian.edu/Photos/Daniel-Award-Red-Lion-Head.svg" alt="Daniel Award Logo" class="da-hero-award-logo da-anim">
+    <span class="da-hero-badge da-anim da-d2">Arizona Christian University</span>
+    <h1 class="da-anim da-d3" style="font-size: clamp(2.5rem, 8vw, 4rem);">Registration Closed</h1>
+    <p class="da-hero-sub da-anim da-d4" style="font-size: clamp(1.2rem, 3vw, 1.5rem);">Thank you for your interest</p>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="da-intro">
+  <div class="da-container-narrow">
+    <p class="da-intro-text da-anim" style="margin-bottom: 2rem;">Registration for the ${esc(h.edition)} ${esc(h.awardName)} honoring ${esc(h.honoreeLine.replace('Honoring ', ''))} is now closed.</p>
+    <p class="da-intro-text da-anim da-d2" style="font-size: 1.15rem; color: var(--acu-gray);">For questions about the event, please contact our Office of Advancement at <a href="mailto:${esc(C.cta.email)}" style="color: var(--acu-red); text-decoration: underline;">${esc(C.cta.email)}</a> or <a href="tel:${esc(C.cta.phoneLink)}" style="color: var(--acu-red); text-decoration: underline;">${esc(C.cta.phone)}</a>.</p>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="/" class="da-hero-cta" style="background: var(--acu-red); display: inline-flex;">
+        Return to Event Page
+        <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('da-vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.da-anim').forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>`;
+
+  return new Response(html, {
+    headers: {
+      'Content-Type': 'text/html;charset=UTF-8',
+      'Cache-Control': 'public, max-age=300',
+    },
+  });
+}
+
+
+// ═══════════════════════════════════════════
 // SERVE REGISTRATION PAGE
 // ═══════════════════════════════════════════
 
 function serveRegistrationPage(env) {
   const C = CONFIG;
+
+  // Check if registration is closed
+  if (!C.registrationOpen) {
+    return serveRegistrationClosedPage();
+  }
+
   const h = C.hero;
   const hon = C.honoree;
   const aw = C.award;

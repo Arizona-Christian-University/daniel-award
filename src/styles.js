@@ -75,6 +75,7 @@ a{text-decoration:none;}
 .da-hero-cta { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; background: var(--acu-red); color: #fff; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(200,55,45,0.3); }
 .da-hero-cta:hover { background: var(--acu-red-light); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(200,55,45,0.5); }
 .da-hero-cta svg { width: 20px; height: 20px; fill: currentColor; }
+.da-hero-cta-disabled { background: rgba(107,107,107,0.3); color: rgba(255,255,255,0.5); cursor: not-allowed; pointer-events: none; box-shadow: none; }
 
 /* ═══════════════════════════════════════════
    INTRO SECTION
@@ -131,6 +132,7 @@ a{text-decoration:none;}
 .da-featured-cta { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2.25rem; border-radius: 50px; font-size: 1.15rem; font-weight: 700; text-decoration: none; background: var(--acu-gold); color: var(--acu-black); transition: all 0.3s ease; }
 .da-featured-cta:hover { background: var(--acu-gold-light); transform: translateY(-2px); box-shadow: 0 6px 25px rgba(212,168,67,0.3); }
 .da-featured-cta svg { width: 18px; height: 18px; fill: currentColor; }
+.da-featured-cta-disabled { background: rgba(107,107,107,0.3); color: rgba(255,255,255,0.5); cursor: not-allowed; pointer-events: none; }
 
 /* ═══════════════════════════════════════════
    PAST RECIPIENTS TIMELINE
@@ -192,6 +194,7 @@ a{text-decoration:none;}
 .da-cta-btn-primary:hover { background: var(--acu-red-light); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(200,55,45,0.3); }
 .da-cta-btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); }
 .da-cta-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.da-cta-btn-disabled { background: rgba(107,107,107,0.3) !important; color: rgba(255,255,255,0.5) !important; cursor: not-allowed; pointer-events: none; border-color: rgba(255,255,255,0.2) !important; }
 
 /* ═══════════════════════════════════════════
    ABOUT THE AWARD

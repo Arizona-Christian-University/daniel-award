@@ -7,6 +7,9 @@
 
 export const CONFIG = {
 
+  // ── Registration Status ──
+  registrationOpen: false, // Set to true to enable registration, false to close
+
   // ── Hero Section ──
   hero: {
     logoUrl:       '',  // URL to award logo image (leave empty to hide)
@@ -184,8 +187,8 @@ export const CONFIG = {
       eventLocation: 'Arizona Biltmore, 2400 E Missouri Ave, Phoenix, AZ 85016', // e.g. "Arizona Biltmore, Phoenix, Arizona"
       eventTime: 'Check-In starts at 6:00 PM. Dinner and Program Start at 7:00 PM',
       dressCode: 'Business Attire',
-      ctaLabel: 'Register Now',
-      ctaUrl: '/register',
+      ctaLabel: 'Registration Closed',
+      ctaUrl: '',
     },
 
     // ── Past Recipients ──
@@ -206,7 +209,7 @@ export const CONFIG = {
       title: 'An Award of Prestige',
       text: 'The Daniel Award honors those whose courageous faith has made a lasting impact on culture, leadership, and the public square.',
       buttons: [
-        { label: 'Register Now', url: '/register', primary: true },
+        { label: 'Registration Closed', url: '', primary: true, disabled: true },
       ],
     },
   },
